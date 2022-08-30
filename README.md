@@ -11,4 +11,12 @@ dc run --rm app sh -c "django-admin startproject app ."
 
 #Install core project
 docker-compose run --rm app sh -c "python manage.py startapp core"
+
+#Create superuser
+docker-compose run --rm app sh -c "python manage.py createsuperuser"
+
+#Work with migrations
+docker-compose run --rm app sh -c "python manage.py migrate"
+docker-compose run --rm app sh -c "python manage.py makemigrations"
+docker-compose run --rm app sh -c "python manage.py showmigrations"
 ```
