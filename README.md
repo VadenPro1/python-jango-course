@@ -6,11 +6,11 @@ dc run --rm app sh -c "flake8"
 # Run tests
 dc run --rm app sh -c "python manage.py test"
 
-#Install jango project
+#Install sub project
 dc run --rm app sh -c "django-admin startproject app ."
 
 #Install core project
-docker-compose run --rm app sh -c "python manage.py startapp core"
+docker-compose run --rm app sh -c "python manage.py startapp user"
 
 #Create superuser
 docker-compose run --rm app sh -c "python manage.py createsuperuser"
