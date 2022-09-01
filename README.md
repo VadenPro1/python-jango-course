@@ -10,7 +10,7 @@ dc run --rm app sh -c "python manage.py test"
 dc run --rm app sh -c "django-admin startproject app ."
 
 #Install core project
-docker-compose run --rm app sh -c "python manage.py startapp user"
+docker-compose run --rm app sh -c "python manage.py startapp recipe"
 
 #Create superuser
 docker-compose run --rm app sh -c "python manage.py createsuperuser"
